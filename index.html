@@ -9,39 +9,114 @@
 <body>
 	<div class="main-container">
 		<div class="container">
-			<h1>Trivia Game</h1>
+			<h1>Cockney Crazy!</h1>
 		</div>
 		<div class="container main-content">
 			<div class="start">
+				<div class="instructions">
+					<p>In this trivia game you will guess the translations of Cockney Rhyming Slang! What's Cockney Ryhming Slang? Glad you asked! It is, according to Wikipedia, a form of slang word construction in the English language that uses rhyme. It started in the early 19th century in the East End of London. Probably the best and most widely known slang term is apples and pears translating to stairs. So, for example, if you asked, "Where did John go?", the response would be, "Up the apples and pears", meaning, John went up the stairs. The following questions include some of the most common cockney slang. Keep in mind this quiz is timed...So no googling! Good luck! God save the Queen! Tally ho! Pip pip, cheerio and all that rot!</p>
+				</div>
 				<button type="button" class="btn btn-outline-secondary startBtn">START!</button>
 			</div>
 			<div class="middle">
 				<div class="counter">
 					<p>Time Remianing: <span class="timer">120</span> Seconds</p>
 				</div>
-				<div class="questions">
-					<div>
-						<form>
-							<p>What's the answer to this question?</p>
-							<input type="radio" name="q1" value="true">This is the answer
-							<input type="radio" name="q1" value="false">This is not the answer
-							<input type="radio" name="q1" value="false">This is not the answer
-							<input type="radio" name="q1" value="false">This is not the answer
+				<div class="mainGame">
+					<form name="quiz" onsubmit="return onSubmit()">
+						<div class="question">
+							<h3>Al Capone</h3>
+							<input type="radio" name="q1" value="a">Telephone
+							<input type="radio" name="q1" value="b">Trombone
+							<input type="radio" name="q1" value="c">Funny Bone
+							<input type="radio" name="q1" value="d">Bank Loan
 							<br>
+						</div>
+						<div class="question">
+							<h3>Kettle and Hob</h3>
+							<input type="radio" name="q2" value="a">Boorish Snob
+							<input type="radio" name="q2" value="b">Uncle Bob
+							<input type="radio" name="q2" value="c">Fob (Pocket Watch)
+							<input type="radio" name="q2" value="d">Squab (Young Domestic Pigeon)
 							<br>
-							<p>This is the second question?</p>
-							<input type="radio" name="q2" value="true">This is the answer
-							<input type="radio" name="q2" value="false">This is not the answer
-							<input type="radio" name="q2" value="false">This is not the answer
-							<input type="radio" name="q2" value="false">This is not the answer
+						</div>
+						<div class="question">
+							<h3>Adam and Eve</h3>
+							<input type="radio" name="q3" value="a">Retrieve
+							<input type="radio" name="q3" value="b">Grieve
+							<input type="radio" name="q3" value="c">Believe
+							<input type="radio" name="q3" value="d">Leave
 							<br>
-							<input type="submit" value="Submit" class="btn btn-outline-secondary submitForm">
-						</form>
-					</div>
+						</div>
+						<div class="question">
+							<h3>Butcher's Hook</h3>
+							<input type="radio" name="q4" value="a">Book
+							<input type="radio" name="q4" value="b">Look
+							<input type="radio" name="q4" value="c">Rook
+							<input type="radio" name="q4" value="d">Inglenook
+							<br>
+						</div>
+						<div class="question">
+							<h3>Barnet Fair</h3>
+							<input type="radio" name="q5" value="a">Hair
+							<input type="radio" name="q5" value="b">Grizzly Bear
+							<input type="radio" name="q5" value="c">Rocking Chair
+							<input type="radio" name="q5" value="d">Mare
+							<br>
+						</div>
+						<div class="question">
+							<h3>Trouble and Strife</h3>
+							<input type="radio" name="q6" value="a">Fife
+							<input type="radio" name="q6" value="b">Wife
+							<input type="radio" name="q6" value="c">Knife
+							<input type="radio" name="q6" value="d">Life
+							<br>
+						</div>
+						<div class="question">
+							<h3>A la Mode</h3>
+							<input type="radio" name="q7" value="a">Load
+							<input type="radio" name="q7" value="b">Toad
+							<input type="radio" name="q7" value="c">Goad
+							<input type="radio" name="q7" value="d">Code
+							<br>
+						</div>
+						<div class="question">
+							<h3>Ruby Murray</h3>
+							<input type="radio" name="q8" value="a">Curry
+							<input type="radio" name="q8" value="b">In a Hurry
+							<input type="radio" name="q8" value="c">Worry
+							<input type="radio" name="q8" value="d">Scurry
+							<br>
+						</div>
+						<div class="question">
+							<h3>Jack Jones</h3>
+							<input type="radio" name="q9" value="a">Stones
+							<input type="radio" name="q9" value="b">Drone
+							<input type="radio" name="q9" value="c">Moans
+							<input type="radio" name="q9" value="d">Alone
+							<br>
+						</div>
+						<div class="question">
+							<h3>Barney Rubble</h3>
+							<input type="radio" name="q10" value="a">Trouble
+							<input type="radio" name="q10" value="b">Bubbble
+							<input type="radio" name="q10" value="c">Stubble
+							<input type="radio" name="q10" value="d">Double
+							<br>
+						</div>
+						<button type="submit" class="btn btn-outline-secondary submitForm">Submit</button>
+					</form>
 				</div>
 			</div>
 			<div class="end">
+				<div class ="results">
+					<h3>Results</h3>
+					<p>Correct Answers: <span class="right">0</span></p><br>
+					<p>Incorrect Answer: <span class="wrong">0</span></p><br>
+					<p>Unanswered: <span class="empty">0</span></p><br>
+				</div>
 				<button type="button" class="btn btn-outline-secondary resetBtn">RESET!</button>
+			</div>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

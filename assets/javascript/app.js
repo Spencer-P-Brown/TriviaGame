@@ -1,17 +1,16 @@
 $(document).ready(function() {
 	var startBtn = $(".startBtn");
-	var submitForm = $(".submitForm")
-	var resetBtn = $(".resettBtn");
-	var time = 10
+	var resetBtn = $(".resetBtn");
+	var time = 5
 	
 	function endScreen() {
 		$(".start").hide();
 		$(".middle").hide();
 		$(".end").show();
-	}
+	};
 //
 	startBtn.click(function() {
-		$(this).hide();
+		$(".start").hide();
 		$(".middle").show();
 		setInterval(function(){
 			time--;
@@ -22,6 +21,15 @@ $(document).ready(function() {
 		}, 1000);
 
 
+	});
+
+	$("form").submit(function(){
+			endScreen();
+			event.preventDefault();
+	});
+
+	resetBtn.click(function(){
+		window.location.reload();
 	});
 
 
